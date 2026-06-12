@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8    # Cores per node
-#SBATCH --partition=X1      # Queue Name
+#SBATCH --ntasks-per-node=8     # Cores per node
+#SBATCH --partition=X1          # Queue Name
 ##
-#SBATCH --job-name=atom 
+#SBATCH --job-name=q 
 #SBATCH --time=90-12:34          # Runtime: Day-HH:MM
 #SBATCH -o sms.%N.%j.out         # STDOUT 
 #SBATCH -e sms.%N.%j.err         # STDERR
@@ -23,9 +23,7 @@ OUT_DIR="OUT"
 
 RUN_FDF="RUN.fdf"
 
-RUNBIN="$HOME/00.Development/0.GitHub/1.MSDFT/Local/ms-dft/Obj/transiesta"
-#RUNBIN="$HOME/00.Development/0.GitHub/1.MSDFT/Local/ms-dft/Obj_gradient/siesta"
-
+RUNBIN="$HOME/00.Development/0.GitHub/14.DFT-alpha/SIESTA/260602/Obj_test/siesta"
 #Remove scratch (YES/NO)
 RMSCRATCH="YES"
 

@@ -40,4 +40,7 @@ SaveTotalPotential    T      # SystemLabel.VT
 SaveNeutralAtomPotential  T
 SaveRho               T
 
+
 User.Basis            T
+DFT-QTC  T
+

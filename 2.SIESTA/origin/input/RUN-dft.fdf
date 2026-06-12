@@ -39,6 +39,3 @@ SaveElectrostaticPotential T # SystemLabel.VH , macroave-potential
 SaveTotalPotential    T      # SystemLabel.VT
 SaveNeutralAtomPotential  T
 SaveRho               T
-
-NetCharge           +1.0
-User.Basis            T

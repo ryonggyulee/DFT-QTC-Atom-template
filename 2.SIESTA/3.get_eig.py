@@ -16,7 +16,9 @@ if __name__ == '__main__':
     # total energy lists
     with open('total.txt', 'w') as f:
         for occ in occs:
+            print(occ)
             path = glob.glob(os.path.join(input_scf_alpha,occ)+'/OUT/*.EIG')[0] 
+            print(path)
             e, ef = siestagap.get_eigs(path)
             homo, lumo = siestagap.get_level(e,ef)
             f.write(f'{occ} \t HOMO = {homo:5.4f} eV \t LUMO = {lumo:5.4f} \n')

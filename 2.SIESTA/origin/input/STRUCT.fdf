@@ -2,7 +2,7 @@ NumberOfAtoms    1           # Number of atoms
 NumberOfSpecies  1           # Number of species
 
 %block ChemicalSpeciesLabel
- 1 49 In
+ 1 14 Si
 %endblock ChemicalSpeciesLabel
 
 #(3) Lattice, coordinates, k-sampling

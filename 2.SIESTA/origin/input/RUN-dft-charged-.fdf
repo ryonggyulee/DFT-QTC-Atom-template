@@ -13,13 +13,13 @@ XC.authors            CA               # CA (Ceperley-Aldr) = PZ
                                     # PBE (Perdew-Burke-Ernzerhof) - GGA
 MeshCutoff            300.000000    Ry      # Default: 50.0 Ry ~ 0.444 Bohr
                                     #         100.0 Ry ~ 0.314 Bohr
-MaxSCFIterations      0           # Default: 50
+MaxSCFIterations      1000           # Default: 50
 SCF.DM.Converge          true         # Default: T
 SCF.DM.Tolerance          1.d-4         # Default: 1.d-4
 SCF.H.Converge           true         # Default: T
 SCF.H.Tolerance          1.d-3 eV       # Default: 1.d-3 eV
 DM.UseSaveDM          .true.        # because of the bug
-SCFMustConverge       .false.
+SCFMustConverge       .true.
 NeglNonOverlapInt     F             # Default: F
 #(3) Eigenvalue problem: order-N or diagonalization
 SolutionMethod        Diagon        # or Transiesta
@@ -37,8 +37,7 @@ SpinPolarized   .true.
 WriteEigenvalues      T      # SystemLabel.out [otherwise ~.EIG]
 SaveElectrostaticPotential T # SystemLabel.VH , macroave-potential
 SaveTotalPotential    T      # SystemLabel.VT
+SaveNeutralAtomPotential  T
 SaveRho               T
 
-
-NetCharge           +1.0
-User.Basis            T
+NetCharge           -1.0

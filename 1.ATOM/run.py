@@ -30,8 +30,6 @@ def check_error(path):
     else:
         return True
 
-
-
 if __name__ == '__main__':
 
     # executable files
@@ -40,8 +38,6 @@ if __name__ == '__main__':
     exec_gatm = os.path.abspath('./input/gatm.py')
 
     # input files
-    name = 'In.ion'
-    input_ion = os.path.abspath(f'./input/{name}')
     input_inp = os.path.abspath('./input/INP')
     input_fae = os.path.abspath('./input/FEPOT') # optional
 
@@ -69,12 +65,8 @@ if __name__ == '__main__':
         else:
             os.system(f'python {exec_gatm} --atm {input_inp} --orb {orb_l[1]} --occ {occ} --out {path}/INP') 
 
-
         # calculate HEPOT
         run_atm(exec_atm, f'{path}/INP', f'{path}/HEPOT')
-
-        # generate ION
-        os.system(f'python {exec_gion} --fae {input_fae} --hae {path}/HEPOT --ion {input_ion} --cut -1.0 --n 8 --out {path}/{name}')
 
         print(path)
 
