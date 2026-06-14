@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
     # input files
     input_siesta = os.path.abspath(f'./origin')
-    input_ion = os.path.abspath(glob.glob(f'./origin/input/*.psf')[0])
+    input_ion = os.path.abspath(glob.glob(f'./origin/input/*.ion')[0])
 
     input_run = os.path.abspath('./origin/input/RUN-dft.fdf')
     input_run_charged_plus = os.path.abspath('./origin/input/RUN-dft-charged+.fdf') 

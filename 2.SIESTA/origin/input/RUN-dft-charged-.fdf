@@ -41,3 +41,6 @@ SaveNeutralAtomPotential  T
 SaveRho               T
 
 NetCharge           -1.0
+
+User.Basis            T
+
